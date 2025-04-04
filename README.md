@@ -42,7 +42,7 @@ hackerthon-site/
 ## Getting Started
 
 1. Clone the repository:
-   git clone https://github.com/devTechs001/hackerthon-site.git
+   git clone https://github.com/devTechs001/portfolio.git
 
 2. Navigate to the project directory:
    bash
@@ -78,6 +78,3 @@ You can customize the website by:
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
-
-This project is open source and available under the MIT License.
