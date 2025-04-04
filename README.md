@@ -86,7 +86,7 @@ hackerthon-site/
 
 1. Clone the repository:
 
-git clone https://github.com/yourusername/hackerthon-site.git
+git clone https://github.com/devTechs001/portfolio.git
 
 
 2. Navigate to project directory:
