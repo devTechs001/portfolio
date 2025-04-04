@@ -4,11 +4,11 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Thi
 
 ## Features
 
-- 🎨 Modern and clean design
-- 📱 Fully responsive layout
-- ✨ Smooth animations and transitions
-- 🎯 Interactive navigation
-- 📝 Sections for:
+-  Modern and clean design
+- Fully responsive layout
+-  Smooth animations and transitions
+-  Interactive navigation
+- Sections for:
   - About
   - Skills
   - Education
@@ -28,8 +28,6 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Thi
 - FontAwesome
 
 ## Project Structure
-
-```
 hackerthon-site/
 ├── index.html
 ├── Portfolio/
@@ -40,19 +38,15 @@ hackerthon-site/
 │   │       └── script.js
 │   └── Cv/
 └── README.md
-```
 
 ## Getting Started
 
 1. Clone the repository:
-   ```bash
    git clone https://github.com/devTechs001/hackerthon-site.git
-   ```
 
 2. Navigate to the project directory:
-   ```bash
+   bash
    cd hackerthon-site
-   ```
 
 3. Open `index.html` in your web browser to view the website.
 
@@ -66,11 +60,9 @@ You can customize the website by:
 ## Deployment with GitHub Pages
 
 1. Push your code to GitHub:
-   ```bash
    git add .
    git commit -m "Initial commit"
    git push origin main
-   ```
 
 2. Go to your GitHub repository settings:
    - Navigate to Settings > Pages
@@ -81,7 +73,6 @@ You can customize the website by:
 3. Wait a few minutes for GitHub Pages to build and deploy your site
 
 4. Your site will be available at: `https://devTechs001.github.io/hackerthon-site`
-
 
 ## Contributing
 
