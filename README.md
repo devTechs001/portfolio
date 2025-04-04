@@ -14,10 +14,10 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Thi
   - Education
   - Interests
   - Contact
-- 🌙 Dark/Light mode toggle
-- 📬 Working contact form
-- 🖼️ Project gallery
-- 📄 Downloadable CV
+- Dark/Light mode toggle
+-  Working contact form
+-  Project gallery
+-  Downloadable CV
 
 ## Technologies Used
 
@@ -35,22 +35,16 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Thi
 
 ## Project Structure
 
-
-=======
->>>>>>> ae5b272651716dcb1cf36dab9509022ad8898e0a
 hackerthon-site/
 ├── index.html
 ├── Portfolio/
 │   ├── src/
 │   │   ├── styles/
 │   │   │   ├── style.css
-│   │   │   ├── dark-theme.css
-│   │   │   └── responsive.css
+│   │   │ 
 │   │   ├── scripts/
 │   │   │   ├── script.js
-│   │   │   ├── theme.js
-│   │   │   ├── animation.js
-│   │   │   └── contact.js
+│   │   │  
 │   │   ├── assets/
 │   │   │   ├── images/
 │   │   │   │   ├── profile.jpg
@@ -58,9 +52,7 @@ hackerthon-site/
 │   │   │   │   ├── project2.jpg
 │   │   │   │   └── project3.jpg
 │   │   │   └── icons/
-│   │   └── pages/
-│   │       ├── projects.html
-│   │       └── contact.html
+│   │   
 │   ├── Cv/
 │   │   └── resume.pdf
 │   └── .gitignore
@@ -125,12 +117,6 @@ cd hackerthon-site
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License.
-
 ## Contact
-
-Your Name - your.email@example.com
 Project Link: [https://github.com/devTechs001/hackerthon-site]
 
