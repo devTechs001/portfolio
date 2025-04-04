@@ -118,5 +118,5 @@ cd hackerthon-site
 5. Open a Pull Request
 
 ## Contact
-Project Link: [https://github.com/devTechs001/hackerthon-site]
+Project Link: [https://github.com/devTechs001/portfolio]
 
