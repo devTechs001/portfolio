@@ -1,0 +1,1376 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --bgColor: #1f242d;
+  --sbgColor: #323946;
+  --textColor: #fff;
+  --mainColor: #0ef;
+  --alt-color: #1a2b3c;
+  --ol-color: #0e1022;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* General Text Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  /* Ensure consistent font across the site */
+  line-height: 1.6;
+  /* Improve readability */
+  color: var(--textColor);
+  /* Default text color */
+  background: var(--bgColor);
+  overflow-x: hidden;
+}
+
+span {
+  color: var(--mainColor);
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  /* Increased font size for better emphasis */
+  font-weight: bold;
+  /* Added bold styling */
+  color: var(--mainColor);
+  /* Use main color for consistency */
+  margin-bottom: 2rem;
+  /* Added spacing below the title */
+  text-transform: uppercase;
+  /* Make the title uppercase */
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 4px;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  background: var(--mainColor);
+  color: var(--textColor);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--mainColor);
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  background: var(--mainColor);
+  color: var(--bgColor);
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+/* Header Section */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--bgColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom: 0.3rem solid rgba(0, 0, 0, 0.3);
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--textColor);
+}
+
+.header .navbar {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.header .navbar a {
+  color: var(--textColor);
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.header .navbar a.active {
+  color: var(--mainColor);
+  font-weight: 700;
+}
+
+.header .navbar a:hover {
+  color: var(--mainColor);
+}
+
+.header .menu-icon {
+  display: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--textColor);
+  transition: color 0.3s ease;
+}
+
+.header .menu-icon:hover {
+  color: var(--mainColor);
+}
+
+/* Mobile Menu Styles */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 2rem 3%;
+  }
+
+  .header .menu-icon {
+    display: block;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bgColor);
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header .navbar.active {
+    display: flex;
+  }
+
+  .header .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 1rem 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 2rem 2%;
+  }
+
+  .header .navbar {
+    padding: 1rem 2%;
+  }
+
+  .header .navbar a {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header .navbar a {
+    font-size: 1.6rem;
+  }
+}
+
+/* Landscape mode adjustments */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .header {
+    padding: 1rem 3%;
+  }
+
+  .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+
+  .home-content p {
+    font-size: 1.4rem;
+  }
+
+  .about-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-content h3 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1.4rem;
+  }
+
+  .services h2,
+  .portfolio h2,
+  .contact h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Fix for iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+  .home {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* About Section */
+.about {
+  margin-top: 3rem;
+  background-color: var(--bgColor);
+  display: flex;
+  padding: 3rem;
+  background-image: url('/Portfolio/src/assets/images/programmer.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.about-content {
+  padding-top: 0.5rem;
+  margin-top: 3rem;
+}
+
+.about-content h3 {
+  font-size: 2.5rem;
+  /* Adjust subtitle size */
+  color: var(--mainColor);
+  /* Use main color for emphasis */
+  margin-bottom: 1rem;
+}
+
+.about-content h1 {
+  font-size: 4rem;
+  /* Adjust main title size */
+  color: var(--textColor);
+  /* Use default text color */
+  margin-bottom: 1.5rem;
+}
+
+.about-content .multiple-text {
+  font-size: 2.5rem;
+  color: var(--mainColor);
+}
+
+.about-content p {
+  font-size: 1.4rem;
+  /* Adjust paragraph size */
+  color: var(--textColor);
+  /* Ensure consistent text color */
+  line-height: 1.8;
+  /* Improve readability */
+  margin-bottom: 2rem;
+}
+
+/* Social Media Icons */
+.social-media a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 2.8rem;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: all 0.5s ease;
+  color: var(--textColor);
+  /* Default icon color */
+}
+
+/* Background colors for each social media icon */
+.social-media a:nth-child(1) {
+  background-color: #3b5998;
+  /* Facebook blue */
+}
+
+.social-media a:nth-child(2) {
+  background-color: #E1306C;
+  /* Instagram pink */
+}
+
+.social-media a:nth-child(3) {
+  background-color: #181717;
+  /* GitHub black */
+}
+
+.social-media a:nth-child(4) {
+  background-color: #0088cc;
+  /* Telegram blue */
+}
+
+.social-media a:nth-child(5) {
+  background-color: #25D366;
+  /* WhatsApp green */
+}
+
+/* Hover effect for social media icons */
+.social-media a:hover {
+  transform: scale(1.1);
+  /* Slightly enlarge the icon */
+  box-shadow: 0 0 1rem var(--mainColor);
+  /* Add a glowing effect */
+  color: var(--bgColor);
+  /* Change icon color on hover */
+}
+
+/* Icon colors */
+.social-media a:nth-child(1) i {
+  color: #fff;
+  /* White for Facebook */
+}
+
+.social-media a:nth-child(2) i {
+  color: #fff;
+  /* White for Instagram */
+}
+
+.social-media a:nth-child(3) i {
+  color: #fff;
+  /* White for GitHub */
+}
+
+.social-media a:nth-child(4) i {
+  color: #fff;
+  /* White for Telegram */
+}
+
+.social-media a:nth-child(5) i {
+  color: #fff;
+  /* White for WhatsApp */
+}
+
+.about-image {
+  position: relative;
+  width: 35rem;
+  height: 35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: visible;
+  margin: 4rem auto;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 2;
+  position: relative;
+  border: 4px solid var(--mainColor);
+}
+
+.about-image::before,
+.about-image::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(45deg, var(--mainColor) 0%, #ff6b6b 50%, #4ecdc4 100%);
+  animation: blobAnimation 10s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.about-image::after {
+  width: 520px;
+  height: 520px;
+  background: linear-gradient(-45deg, #4ecdc4 0%, var(--mainColor) 50%, #ff6b6b 100%);
+  animation: blobAnimation 10s ease-in-out infinite reverse;
+  filter: blur(20px);
+  z-index: 0;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .about-content {
+    padding-right: 0;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .about-image {
+    width: 28rem;
+    height: 28rem;
+    margin: 0 auto;
+  }
+
+  .about-image::before {
+    width: 32rem;
+    height: 32rem;
+    opacity: 0.6;
+  }
+
+  .about-image::after {
+    width: 34rem;
+    height: 34rem;
+    opacity: 0.4;
+    filter: blur(12px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about {
+    padding: 1.5rem;
+  }
+
+  .about-content {
+    margin-bottom: 1.5rem;
+  }
+
+  .about-image {
+    width: 22rem;
+    height: 22rem;
+  }
+
+  .about-image::before {
+    width: 24rem;
+    height: 24rem;
+    opacity: 0.5;
+  }
+
+  .about-image::after {
+    width: 26rem;
+    height: 26rem;
+    opacity: 0.3;
+    filter: blur(10px);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .about {
+    padding: 1rem;
+  }
+
+  .about-image {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .about-image::before {
+    width: 20rem;
+    height: 20rem;
+    opacity: 0.4;
+  }
+
+  .about-image::after {
+    width: 22rem;
+    height: 22rem;
+    opacity: 0.2;
+    filter: blur(8px);
+  }
+}
+
+@keyframes blobAnimation {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  25% {
+    border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
+    transform: translate(-50%, -50%) rotate(90deg) scale(1.1);
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: translate(-50%, -50%) rotate(180deg) scale(1);
+  }
+  75% {
+    border-radius: 40% 60% 30% 70% / 70% 30% 60% 40%;
+    transform: translate(-50%, -50%) rotate(270deg) scale(1.1);
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: translate(-50%, -50%) rotate(360deg) scale(1);
+  }
+}
+
+/* Skills Section */
+.skills {
+  background: var(--sbgColor);
+  padding: 3rem;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.skills-container .skill-box h3 {
+  font-size: 1.8rem;
+  color: var(--mainColor);
+  margin-bottom: 1rem;
+}
+
+.skills-container .skill-box p {
+  font-size: 1.2rem;
+  color: var(--textColor);
+}
+
+.container1,
+.container2 {
+  width: 600px;
+  height: auto;
+  padding: 75px 90px;
+  margin-left: 80px;
+  border: 2px solid var(--bgColor);
+  border-radius: 1rem;
+  transition: 0.5s ease;
+}
+
+.container2 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.container2 .heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--mainColor);
+  margin-bottom: 2.3rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+}
+
+.container1:hover,
+.container2:hover {
+  border: 2px solid var(--mainColor);
+  transform: scale(1.02);
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--mainColor);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+}
+
+.bar {
+  margin: 20px 0;
+}
+
+.bar .info {
+  margin-bottom: 8px;
+}
+
+.bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+.bar .progress-line {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background: var(--bgColor);
+  border-radius: 10px;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line span {
+  height: 100%;
+  background: var(--mainColor);
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.progress-line.html span {
+  width: 90%;
+}
+
+.progress-line.css span {
+  width: 85%;
+}
+
+.progress-line.js span {
+  width: 80%;
+}
+
+.progress-line.python span {
+  width: 75%;
+}
+
+.progress-line.react span {
+  width: 70%;
+}
+
+.progress-line.java span {
+  width: 65%;
+}
+
+.progress-line.git span {
+  width: 85%;
+}
+
+.progress-line.cpp span {
+  width: 60%;
+}
+
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--textColor);
+  padding: 1px 8px;
+  opacity: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+}
+
+.progress-line.html span::after {
+  content: "90%";
+}
+
+.progress-line.css span::after {
+  content: "85%";
+}
+
+.progress-line.js span::after {
+  content: "80%";
+}
+
+.progress-line.python span::after {
+  content: "75%";
+}
+
+.progress-line.react span::after {
+  content: "70%";
+}
+
+.progress-line.java span::after {
+  content: "65%";
+}
+
+.progress-line.git span::after {
+  content: "85%";
+}
+
+.progress-line.cpp span::after {
+  content: "60%";
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 992px) {
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container1,
+  .container2 {
+    width: 100%;
+    margin-left: 0;
+    padding: 40px 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bar .info span {
+    font-size: 15px;
+  }
+
+  .progress-line span::after {
+    font-size: 13px;
+  }
+}
+
+/* Education Section */
+.education {
+  background: var(--bgColor);
+  padding: 3rem;
+}
+
+.education .title {
+  text-align: center;
+  font-size: 2.5rem;
+  /* Match other headings */
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 2rem;
+  color: var(--mainColor);
+  /* Use main color for consistency */
+}
+
+.education-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  /* Space between education boxes */
+  max-width: 1200px;
+  /* Max width for the container */
+  margin: 0 auto;
+  /* Center the container */
+}
+
+.education-container .education-box {
+  flex: 1 1 30rem;
+  /* Flex properties for responsive design */
+  background: var(--sbgColor);
+  /* Background color */
+  padding: 3rem 2rem 4rem;
+  /* Padding for the boxes */
+  border-radius: 2rem;
+  /* Rounded corners */
+  text-align: center;
+  /* Center text */
+  border: 0.2rem solid var(--sbgColor);
+  /* Border */
+  transition: 0.5s ease;
+  /* Transition for hover effect */
+}
+
+.education-container .education-box:hover {
+  border-color: var(--mainColor);
+  /* Change border color on hover */
+  transform: scale(1.02);
+  /* Slightly scale up on hover */
+}
+
+.education-box i {
+  font-size: 7rem;
+  /* Icon size */
+  background: var(--mainColor);
+  /* Background color for the icon */
+  color: var(--textColor);
+  /* Icon color */
+  padding: 1rem;
+  border-radius: 50%;
+  /* Circular icon background */
+  margin-bottom: 1rem;
+}
+
+.education-box h3 {
+  font-size: 2.6rem;
+  /* Heading size */
+  color: var(--mainColor);
+  /* Heading color */
+  margin-bottom: 1rem;
+}
+
+.education-box p {
+  font-size: 1.3rem;
+  /* Paragraph size */
+  color: var(--textColor);
+  /* Text color */
+  margin: 1rem 0;
+}
+
+/* Interests Section */
+.interests {
+  background: var(--sbgColor);
+  padding: 3rem 2rem;
+  color: var(--textColor);
+}
+
+.interests .heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--mainColor);
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+}
+
+.interests-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.interest-box {
+  flex: 1 1 30rem;
+  /* Responsive box size */
+  background: var(--bgColor);
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.interest-box:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.interest-box i {
+  font-size: 3rem;
+  color: var(--mainColor);
+  margin-bottom: 1rem;
+}
+
+.interest-box h3 {
+  font-size: 1.8rem;
+  color: var(--mainColor);
+  margin-bottom: 1rem;
+}
+
+.interest-box p {
+  font-size: 1.2rem;
+  color: var(--textColor);
+}
+
+/* Projects Section */
+.projects {
+  background: var(--bgColor);
+  padding: 6rem 2rem;
+  /* Adjust the padding as needed */
+  color: var(--textColor);
+}
+
+.projects .heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--mainColor);
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Responsive grid */
+  gap: 2.5rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+  /* Enhanced shadow on hover */
+}
+
+.project-box img {
+  width: 100%;
+  /* Ensure the image fills the width of the container */
+  height: 100%;
+  /* Ensure the image fills the height of the container */
+  object-fit: cover;
+  /* Ensures the image covers the box without distortion */
+  transition: transform 0.5s ease;
+}
+
+.project-box:hover img {
+  transform: scale(1.1);
+  /* Zoom in on hover */
+}
+
+.project-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--mainColor));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+}
+
+.project-box:hover .project-layer {
+  transform: translateY(0%);
+  /* Slide up on hover */
+}
+
+.project-layer h4 {
+  font-size: 2rem;
+  color: var(--textColor);
+  margin-bottom: 1rem;
+}
+
+.project-layer p {
+  font-size: 1.4rem;
+  color: var(--textColor);
+  margin: 1rem 0;
+}
+
+.project-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: var(--textColor);
+  border-radius: 50%;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.project-layer a i {
+  font-size: 1.8rem;
+  color: var(--sbgColor);
+}
+
+.project-layer a:hover {
+  background: var(--mainColor);
+}
+
+/* Contact Section */
+.contact {
+  background-color: var(--sbgColor);
+  padding: 4rem 2rem;
+  /* Adjusted padding for better spacing */
+}
+
+.contact h2 {
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  /* Increased font size for better visibility */
+  text-align: center;
+  color: var(--mainColor);
+}
+
+.contact form {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  /* Added gap for better spacing */
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--textColor);
+  background: var(--sbgColor);
+  border-radius: 0.8rem;
+  margin: 1rem 0;
+  border: 0.1rem solid var(--mainColor);
+  /* Added border for better visibility */
+  transition: border-color 0.3s ease;
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+  border-color: var(--mainColor);
+  /* Highlight border on focus */
+}
+
+.contact form .input-box input {
+  width: calc(50% - 1rem);
+  /* Adjusted width for better responsiveness */
+}
+
+.contact form textarea {
+  resize: none;
+  height: 150px;
+  /* Fixed height for textarea */
+}
+
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  background: var(--mainColor);
+  color: var(--textColor);
+  border-radius: 0.8rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact form .btn:hover {
+  background: var(--textColor);
+  color: var(--bgColor);
+  transform: translateY(-3px);
+  /* Slight lift on hover */
+}
+
+/* Footer Section */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background: var(--sbgColor);
+  color: var(--textColor);
+}
+
+.footer-text {
+  font-size: 1.4rem;
+  /* Adjust footer text size */
+  color: var(--textColor);
+  /* Ensure footer text is visible */
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer-iconTop a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: var(--sbgColor);
+  font-size: 2.4rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-iconTop a:hover {
+  color: var(--textColor);
+  /* Change icon color on hover */
+}
+
+/* Style for the "back to top" icon */
+.footer-iconTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--mainColor);
+  border-radius: 50%;
+  width: 4.5rem;
+  /* Slightly increased size */
+  height: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 1rem var(--mainColor);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  cursor: pointer;
+  /* Added pointer cursor for better UX */
+}
+
+.footer-iconTop:hover {
+  transform: scale(1.15);
+  /* Slightly larger hover effect */
+  box-shadow: 0 0 2rem var(--mainColor);
+  /* Enhanced shadow on hover */
+}
+
+/* Skill Icons Colors */
+.bar i.bxl-html5 {
+  color: #e34c26;
+  /* HTML5 orange */
+}
+
+.bar i.bxl-css3 {
+  color: #264de4;
+  /* CSS3 blue */
+}
+
+.bar i.bxl-javascript {
+  color: #f0db4f;
+  /* JavaScript yellow */
+}
+
+.bar i.bxl-git {
+  color: #f34f29;
+  /* Git red */
+}
+
+.bar i.bxl-python {
+  color: #306998;
+  /* Python blue */
+}
+
+.bar i.bxl-react {
+  color: #61dafb;
+  /* React blue */
+}
+
+.bar i.bxl-java {
+  color: #007396;
+  /* Java blue */
+}
+
+.bar i.bxl-c-plus-plus {
+  color: #00599c;
+  /* C++ blue */
+}
+
+/* Icon size and hover effect */
+.bar i {
+  font-size: 2rem;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.bar:hover i {
+  transform: scale(1.2);
+}
+
+/* Professional Skills Section */
+.container2 {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.radial-bars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.radial-bar {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.radial-bar svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg);
+}
+
+.radial-bar svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 10;
+  stroke: var(--bgColor);
+  transform: translate(5px, 5px);
+  stroke-linecap: round;
+}
+
+.radial-bar svg circle:nth-child(2) {
+  stroke: var(--mainColor);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+/* Individual skill percentages */
+.radial-bar.design svg circle:nth-child(2) {
+  animation: design 2s ease-out forwards;
+}
+
+.radial-bar.html svg circle:nth-child(2) {
+  animation: html 2s ease-out forwards;
+}
+
+.radial-bar.css svg circle:nth-child(2) {
+  animation: css 2s ease-out forwards;
+}
+
+.radial-bar.js svg circle:nth-child(2) {
+  animation: js 2s ease-out forwards;
+}
+
+.radial-bar.react svg circle:nth-child(2) {
+  animation: react 2s ease-out forwards;
+}
+
+.radial-bar.node svg circle:nth-child(2) {
+  animation: node 2s ease-out forwards;
+}
+
+/* Percentage text */
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--mainColor);
+}
+
+.text {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--textColor);
+  margin-top: 1rem;
+}
+
+/* Animations for each skill */
+@keyframes design {
+  100% {
+    stroke-dashoffset: 88;
+    /* 440 - (440 * 80 / 100) */
+  }
+}
+
+@keyframes html {
+  100% {
+    stroke-dashoffset: 44;
+    /* 440 - (440 * 90 / 100) */
+  }
+}
+
+@keyframes css {
+  100% {
+    stroke-dashoffset: 66;
+    /* 440 - (440 * 85 / 100) */
+  }
+}
+
+@keyframes js {
+  100% {
+    stroke-dashoffset: 88;
+    /* 440 - (440 * 80 / 100) */
+  }
+}
+
+@keyframes react {
+  100% {
+    stroke-dashoffset: 132;
+    /* 440 - (440 * 70 / 100) */
+  }
+}
+
+@keyframes node {
+  100% {
+    stroke-dashoffset: 154;
+    /* 440 - (440 * 65 / 100) */
+  }
+}
+
+/* Hover effects */
+.radial-bar:hover svg circle:nth-child(2) {
+  filter: drop-shadow(0 0 5px var(--mainColor));
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .radial-bars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .radial-bars {
+    grid-template-columns: 1fr;
+  }
+}
+
+.multiple-text {
+  color: var(--mainColor);
+  display: inline-block;
+  min-width: 200px;
+  min-height: 1em;
+  border: 1px solid transparent;
+  /* This helps visualize the element */
+}
+
+/* Landscape mode adjustments */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .about {
+    padding: 1.5rem;
+  }
+
+  .about-content {
+    margin-bottom: 1rem;
+  }
+
+  .about-image {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .about-image::before {
+    width: 22rem;
+    height: 22rem;
+  }
+
+  .about-image::after {
+    width: 24rem;
+    height: 24rem;
+  }
+}
