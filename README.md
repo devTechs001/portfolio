@@ -45,8 +45,7 @@ hackerthon-site/
    git clone https://github.com/devTechs001/portfolio.git
 
 2. Navigate to the project directory:
-   bash
-   cd hackerthon-site
+   cd portfolio
 
 3. Open `index.html` in your web browser to view the website.
 
