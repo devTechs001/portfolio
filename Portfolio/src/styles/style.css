@@ -1374,3 +1374,11 @@ span {
     height: 24rem;
   }
 }
+
+
+.theme-toggle {
+    font-size: 2.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    background: none;
+}

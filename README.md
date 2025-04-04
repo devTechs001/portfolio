@@ -14,6 +14,10 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Thi
   - Education
   - Interests
   - Contact
+- 🌙 Dark/Light mode toggle
+- 📬 Working contact form
+- 🖼️ Project gallery
+- 📄 Downloadable CV
 
 ## Technologies Used
 
@@ -26,67 +30,102 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Thi
 - ScrollReveal for scroll animations
 - Google Fonts (Poppins)
 - FontAwesome
+- EmailJS for contact form
+- LocalStorage for theme persistence
 
 ## Project Structure
 
-```
 hackerthon-site/
 ├── index.html
 ├── Portfolio/
 │   ├── src/
 │   │   ├── styles/
-│   │   │   └── style.css
-│   │   └── scripts/
-│   │       └── script.js
-│   └── Cv/
+│   │   │   ├── style.css
+│   │   │   ├── dark-theme.css
+│   │   │   └── responsive.css
+│   │   ├── scripts/
+│   │   │   ├── script.js
+│   │   │   ├── theme.js
+│   │   │   ├── animation.js
+│   │   │   └── contact.js
+│   │   ├── assets/
+│   │   │   ├── images/
+│   │   │   │   ├── profile.jpg
+│   │   │   │   ├── project1.jpg
+│   │   │   │   ├── project2.jpg
+│   │   │   │   └── project3.jpg
+│   │   │   └── icons/
+│   │   └── pages/
+│   │       ├── projects.html
+│   │       └── contact.html
+│   ├── Cv/
+│   │   └── resume.pdf
+│   └── .gitignore
 └── README.md
-```
 
-## Getting Started
+## File Details
+
+### HTML Files
+- `index.html`: Main landing page with hero section, about, skills, and education
+- `projects.html`: Gallery of completed projects with descriptions
+- `contact.html`: Contact form and social media links
+
+### CSS Files
+- `style.css`: Main stylesheet with core styles
+- `dark-theme.css`: Dark mode specific styles
+- `responsive.css`: Media queries for responsive design
+
+### JavaScript Files
+- `script.js`: Main JavaScript file with core functionality
+- `theme.js`: Handles dark/light mode toggle and persistence
+- `animation.js`: Controls scroll animations and typing effects
+- `contact.js`: Handles contact form submission and validation
+
+### Assets
+- `/images`: Contains all project images and profile photo
+- `/icons`: Custom icons and favicon
+- `resume.pdf`: Downloadable CV file
+
+## Setup and Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/devTechs001/hackerthon-site.git
-   ```
 
-2. Navigate to the project directory:
-   ```bash
-   cd hackerthon-site
-   ```
+git clone https://github.com/yourusername/hackerthon-site.git
 
-3. Open `index.html` in your web browser to view the website.
 
-## Customization
+2. Navigate to project directory:
 
-You can customize the website by:
-1. Modifying the content in `index.html`
-2. Adjusting styles in `Portfolio/src/styles/style.css`
-3. Adding new features in `Portfolio/src/scripts/script.js`
+cd hackerthon-site
 
-## Deployment with GitHub Pages
+3. Open `index.html` in your browser
 
-1. Push your code to GitHub:
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
-   ```
+## Usage
 
-2. Go to your GitHub repository settings:
-   - Navigate to Settings > Pages
-   - Under "Source", select "Deploy from a branch"
-   - Select "main" branch and "/ (root)" folder
-   - Click "Save"
+- Toggle theme: Click the moon/sun icon in the navigation
+- Download CV: Click the download button in the About section
+- Contact Form: Fill out the form in the Contact section
+- View Projects: Navigate to the Projects section to see recent work
 
-3. Wait a few minutes for GitHub Pages to build and deploy your site
+## Browser Support
 
-4. Your site will be available at: `https://devTechs001.github.io/hackerthon-site`
-
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-This project is open source and available under the MIT License.
+This project is licensed under the MIT License.
+
+## Contact
+
+Your Name - your.email@example.com
+Project Link: [https://github.com/devTechs001/hackerthon-site]
