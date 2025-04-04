@@ -4,11 +4,11 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Thi
 
 ## Features
 
-- 🎨 Modern and clean design
-- 📱 Fully responsive layout
-- ✨ Smooth animations and transitions
-- 🎯 Interactive navigation
-- 📝 Sections for:
+-  Modern and clean design
+- Fully responsive layout
+-  Smooth animations and transitions
+-  Interactive navigation
+- Sections for:
   - About
   - Skills
   - Education
@@ -35,6 +35,9 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Thi
 
 ## Project Structure
 
+
+=======
+>>>>>>> ae5b272651716dcb1cf36dab9509022ad8898e0a
 hackerthon-site/
 ├── index.html
 ├── Portfolio/
@@ -62,6 +65,7 @@ hackerthon-site/
 │   │   └── resume.pdf
 │   └── .gitignore
 └── README.md
+
 
 ## File Details
 
@@ -129,3 +133,4 @@ This project is licensed under the MIT License.
 
 Your Name - your.email@example.com
 Project Link: [https://github.com/devTechs001/hackerthon-site]
+
